@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Types List</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header-page">
+        <div class="title-page-todo">
+            <p>TodoTypesList</p>
+        </div>
+    </header>
+    <main class="content-page">
+        <section class="ctn-app">
+            <article class="ctn-all-form">
+                <p class="title-ctn-form">Aquí puedes agregar nuevas notas</p>
+                <form action="" id="form-todo" class="form-todo">
+                    <div class="form-title-todo">
+                        <label for="titleTodo">  Agrega una nota</label>
+                        <input type="text" name="titleTodo" id="titleTodo" placeholder="Nota">
+                    </div>
+                    <div class="form-text-todo">
+                        <textarea name="textTodo" id="textTodo" cols="auto" rows="2" placeholder="Agregale una Descripción" ></textarea>
+                    </div>
+                    <div class="select-input-todo">
+                        <label for="typeTodo">Tipo de Nota</label>
+                        <select name="typeTodo" id="typeTodo">
+                            <option value="">Seleccionar</option>
+                            <option value="Universidad">Universidad</option>
+                            <option value="Compras">Compras</option>
+                            <option value="Pagos">Pagos</option>
+                            <option value="Tareas">Tareas</option>
+                            <option value="Diario">Diario</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-input-submit">
+                        <input type="submit" value="Agregar">
+                    </div>
+                </form>
+            </article>
+            <article class="ctn-all-todo">
+                <p class="title-ctn-todo">Tus notas</p>
+                <div id="list-todo-types" class="list-todo-types"></div>
+            </article>
+        </section>
+    </main>
+    <footer class="bottom-page">
+        <p><span id="data-copy"></span> Todos los derechos reservados </p>
+    </footer>
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>

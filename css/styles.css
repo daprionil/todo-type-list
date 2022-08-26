@@ -1,0 +1,245 @@
+@-webkit-keyframes firstTodoAnimation {
+  0% {
+    background: transparent;
+  }
+  50% {
+    background: rgba(255, 0, 0, 0.476);
+  }
+  100% {
+    background: transparent;
+  }
+}
+@keyframes firstTodoAnimation {
+  0% {
+    background: transparent;
+  }
+  50% {
+    background: rgba(255, 0, 0, 0.476);
+  }
+  100% {
+    background: transparent;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+input {
+  border: none;
+  outline: none;
+  background: #FFFFFF;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-shadow: 0px 1px 2px #C0C0C0;
+}
+input::-moz-placeholder {
+  font-size: 1rem;
+}
+input:-ms-input-placeholder {
+  font-size: 1rem;
+}
+input::placeholder {
+  font-size: 1rem;
+}
+
+input[type=submit], button {
+  cursor: pointer;
+  padding: 5px 7px;
+  transition: box-shadow 0.3s ease;
+}
+input[type=submit]:hover, button:hover {
+  box-shadow: 0px 1px 2px #C0C0C0, 3px 0px 2px #C0C0C0;
+}
+
+body {
+  height: 100vh;
+}
+body .header-page {
+  background: #fb2c2c;
+}
+body .header-page .title-page-todo {
+  text-align: center;
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+}
+body .content-page .ctn-app {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 700px));
+  gap: 10px;
+  justify-content: center;
+}
+body .content-page .ctn-app .ctn-all-form .title-ctn-form {
+  margin: 1rem 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+body .content-page .ctn-app .ctn-all-form .form-todo {
+  background: #e1e1e1;
+  border-radius: 5px;
+  padding: 10px 10px 10px 15px;
+}
+body .content-page .ctn-app .ctn-all-form .form-todo * {
+  margin-top: 10px;
+}
+body .content-page .ctn-app .ctn-all-form .form-todo .message {
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 5px;
+}
+body .content-page .ctn-app .ctn-all-form .form-todo .message.alert {
+  background-color: #fb2c2c;
+}
+body .content-page .ctn-app .ctn-all-form .form-todo .message.success {
+  background-color: rgb(0, 147, 5);
+}
+body .content-page .ctn-app .ctn-all-form .form-todo .form-title-todo input {
+  width: 100%;
+  margin: 10px 0;
+}
+body .content-page .ctn-app .ctn-all-form .form-todo .form-text-todo {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+body .content-page .ctn-app .ctn-all-form .form-todo .form-text-todo textarea {
+  resize: none;
+  outline: none;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+body .content-page .ctn-app .ctn-all-form .form-todo .select-input-todo {
+  display: flex;
+  flex-direction: column;
+}
+body .content-page .ctn-app .ctn-all-form .form-todo .select-input-todo select {
+  background: #FFFFFF;
+  padding: 5px 7px;
+  border-radius: 5px;
+  border: none 5px;
+}
+body .content-page .ctn-app .ctn-all-form .form-todo .form-input-submit {
+  text-align: right;
+}
+body .content-page .ctn-app .ctn-all-form .form-todo .form-input-submit input[type=submit] {
+  background-color: rgb(0, 145, 255);
+  color: white;
+  font-weight: 700;
+  padding: 10px;
+}
+body .content-page .ctn-app .ctn-all-form .form-todo .form-input-submit input[type=submit].mode-form {
+  background-color: darkgoldenrod;
+}
+body .content-page .ctn-app .ctn-all-todo {
+  margin-bottom: 30px;
+}
+body .content-page .ctn-app .ctn-all-todo .title-ctn-todo {
+  margin: 1rem 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+body .content-page .ctn-app .ctn-all-todo .list-todo-types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  gap: 10px;
+}
+body .content-page .ctn-app .ctn-all-todo .list-todo-types .ctn-nothing {
+  background-color: slategrey;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  align-self: center;
+  color: white;
+  grid-column: span 2;
+}
+body .content-page .ctn-app .ctn-all-todo .list-todo-types .item-todo {
+  background: rgba(225, 225, 225, 0.4274509804);
+  padding: 10px;
+  border-radius: 5px;
+}
+body .content-page .ctn-app .ctn-all-todo .list-todo-types .item-todo .title-todo {
+  background: white;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+body .content-page .ctn-app .ctn-all-todo .list-todo-types .item-todo .descrip-todo {
+  padding: 5px;
+  margin-top: 5px;
+  background: rgba(225, 225, 225, 0.4274509804);
+  border-radius: 5px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+body .content-page .ctn-app .ctn-all-todo .list-todo-types .item-todo .ctn-others {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+body .content-page .ctn-app .ctn-all-todo .list-todo-types .item-todo .ctn-others .ctn-img-type {
+  text-align: center;
+  padding: 10px 0;
+}
+body .content-page .ctn-app .ctn-all-todo .list-todo-types .item-todo .ctn-others .ctn-img-type .text-type {
+  font-weight: 700;
+}
+body .content-page .ctn-app .ctn-all-todo .list-todo-types .item-todo .ctn-others .ctn-img-type .img-type {
+  font-size: 2rem;
+}
+body .content-page .ctn-app .ctn-all-todo .list-todo-types .item-todo .ctn-others .ctn-actions button {
+  border: none;
+  padding: 5px 7px;
+  font-size: 1rem;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  transition: box-shadow 0.3s ease;
+}
+body .content-page .ctn-app .ctn-all-todo .list-todo-types .item-todo .ctn-others .ctn-actions button:hover {
+  box-shadow: 0px 1px 2px #C0C0C0, 3px 0px 2px #C0C0C0;
+}
+body .content-page .ctn-app .ctn-all-todo .list-todo-types .item-todo .ctn-others .ctn-actions .edit-todo {
+  background-color: rgb(0, 145, 255);
+}
+body .content-page .ctn-app .ctn-all-todo .list-todo-types .item-todo .ctn-others .ctn-actions .delete-todo {
+  background-color: #fb2c2c;
+}
+body .content-page .ctn-app .ctn-all-todo .list-todo-types .item-todo:first-child {
+  -webkit-animation: firstTodoAnimation 1s;
+          animation: firstTodoAnimation 1s;
+  -webkit-animation-iteration-count: initial;
+          animation-iteration-count: initial;
+}
+body .bottom-page {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  padding: 10px 0;
+}
+body .bottom-page p {
+  font-size: 0.9rem;
+  padding: 5px;
+  background: #C0C0C0;
+}
+body .bottom-page p span {
+  font-weight: 700;
+}/*# sourceMappingURL=styles.css.map */
